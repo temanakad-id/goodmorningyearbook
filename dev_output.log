@@ -1,0 +1,15 @@
+
+> yearbook-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1846ms
+ ○ Compiling / ...
+ ✓ Compiled / in 9.6s (1384 modules)
+ GET / 200 in 10425ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 8.5s (1355 modules)
+ GET /logo.svg 404 in 7744ms
