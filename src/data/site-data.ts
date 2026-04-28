@@ -1,4 +1,4 @@
-import { SiteConfig, Service, TeamMember, Review, WorkflowStep, NewsArticle } from "@/types";
+import { SiteConfig, Service, TeamMember, Review, WorkflowStep, NewsArticle, ProductionServiceCard } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "Yearbook Company",
@@ -75,5 +75,56 @@ export const news: NewsArticle[] = [
     excerpt: "We are excited to announce our new interactive platform...",
     slug: "launching-digital-yearbook",
     image: "/images/news/launch.jpg",
+  },
+];
+
+export const productionServices: ProductionServiceCard[] = [
+  {
+    id: 1,
+    title: "Drone Shoot",
+    subtitle: "Film Angkatan",
+    gradient: "from-[#667eea] to-[#764ba2]",
+    overlayTitle: "Sesi Drone Shoot / Formasi Angkatan",
+    overlaySubtitle: "Aerial Photography",
+  },
+  {
+    id: 2,
+    title: "GM Hub Creative",
+    subtitle: "Digital Yearbook",
+    gradient: "from-[#e6005c] to-[#ff4081]",
+    overlayTitle: "Creative Digital / Yearbook",
+    overlaySubtitle: "Interactive Design",
+  },
+  {
+    id: 3,
+    title: "Augmented Reality",
+    subtitle: "Video BTS",
+    gradient: "from-[#4facfe] to-[#00f2fe]",
+    overlayTitle: "Augmented / Reality",
+    overlaySubtitle: "AR Experience",
+  },
+  {
+    id: 4,
+    title: "Exclusive Yearbook",
+    subtitle: "Creative Design",
+    gradient: "from-[#43e97b] to-[#38f9d7]",
+    overlayTitle: "Exclusive / Yearbook",
+    overlaySubtitle: "Hardbox Packaging · 3D Tunnel Acrylic",
+  },
+  {
+    id: 5,
+    title: "Film Angkatan",
+    subtitle: "Creative Concept",
+    gradient: "from-[#fa709a] to-[#fee140]",
+    overlayTitle: "Film / Angkatan",
+    overlaySubtitle: "Cinematic Production",
+  },
+  {
+    id: 6,
+    title: "Malam Keakraban",
+    subtitle: "Farewell Moment",
+    gradient: "from-[#a18cd1] to-[#fbc2eb]",
+    overlayTitle: "Makrab / Angkatan",
+    overlaySubtitle: "Event Documentation",
   },
 ];
