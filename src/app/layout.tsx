@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "Creative digital yearbook company based in Salatiga, Indonesia.",
 };
 
+import Navbar from "@/components/layout/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${sora.variable} antialiased font-body`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
