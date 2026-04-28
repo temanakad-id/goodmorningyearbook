@@ -47,3 +47,12 @@ export interface NewsArticle {
   slug: string;
   image: string;
 }
+
+export interface ProductionServiceCard {
+  id: number;
+  title: string;
+  subtitle: string;
+  gradient: string;
+  overlayTitle: string;
+  overlaySubtitle: string;
+}
