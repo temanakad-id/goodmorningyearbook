@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ClientReviews Component renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="relative overflow-hidden bg-[#0a0a0a] px-[50px] py-[110px]"
+  >
+    <div
+      class="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2"
+      style="width: 700px; height: 700px; background: radial-gradient(circle at top, rgba(230,0,92,0.08) 0%, transparent 50%);"
+    />
+    <div
+      class="relative z-10 flex flex-col items-center text-center"
+    >
+      <h2
+        class="mb-6 font-display text-[52px] text-white"
+      >
+        <span
+          class="italic"
+        >
+          Client's
+        </span>
+         Reviews
+      </h2>
+      <div
+        class="mb-[50px] inline-flex items-center gap-2 rounded-[50px] px-6 py-2"
+        style="background-color: rgba(255, 255, 255, 0.07);"
+      >
+        <span
+          class="text-[13px] text-[#ffd700]"
+        >
+          ★★★★★
+        </span>
+        <span
+          class="text-[13px] text-white/75"
+        >
+          4.9/5 — Based on Client Satisfaction Survey
+        </span>
+      </div>
+      <div
+        class="flex w-full flex-wrap justify-center gap-[20px] max-[900px]:flex-col max-[900px]:items-center"
+        data-initial=""hidden""
+        data-whileinview=""visible""
+        viewport="[object Object]"
+      >
+        <div
+          class="group relative flex w-full max-w-[280px] flex-col rounded-[20px] border p-[30px] transition-colors duration-500 max-[900px]:max-w-full border-[rgba(230,0,92,0.4)] bg-[rgba(255,255,255,0.1)]"
+        >
+          <p
+            class="mb-6 text-left text-[14px] leading-[1.7] text-white opacity-85"
+          >
+            "
+            Good Morning Yearbook benar-benar membuat buku tahunan kami terasa istimewa. Desainnya kreatif, prosesnya profesional. Sangat recommended!
+            "
+          </p>
+          <div
+            class="mt-auto flex items-center gap-3"
+          >
+            <div
+              class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full bg-primary text-[13px] font-bold text-white"
+            >
+              SM
+            </div>
+            <div
+              class="flex flex-col text-left"
+            >
+              <span
+                class="text-[14px] font-semibold text-white"
+              >
+                Siti Marwah
+              </span>
+              <span
+                class="text-[11px] text-white opacity-45"
+              >
+                Kepala Sekolah, SMAN 1 Salatiga
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative flex w-full max-w-[280px] flex-col rounded-[20px] border p-[30px] transition-colors duration-500 max-[900px]:max-w-full border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.05)]"
+        >
+          <p
+            class="mb-6 text-left text-[14px] leading-[1.7] text-white opacity-85"
+          >
+            "
+            Kemampuan tim GM dalam menciptakan pengalaman digital yang interaktif sangat luar biasa. Siswa-siswa sangat antusias dengan hasilnya!
+            "
+          </p>
+          <div
+            class="mt-auto flex items-center gap-3"
+          >
+            <div
+              class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full bg-primary text-[13px] font-bold text-white"
+            >
+              BK
+            </div>
+            <div
+              class="flex flex-col text-left"
+            >
+              <span
+                class="text-[14px] font-semibold text-white"
+              >
+                Budi Kurniawan
+              </span>
+              <span
+                class="text-[11px] text-white opacity-45"
+              >
+                Waka Kesiswaan, SMA 5 Semarang
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative flex w-full max-w-[280px] flex-col rounded-[20px] border p-[30px] transition-colors duration-500 max-[900px]:max-w-full border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.05)]"
+        >
+          <p
+            class="mb-6 text-left text-[14px] leading-[1.7] text-white opacity-85"
+          >
+            "
+            Tim GM Yearbook benar-benar mengangkat kenangan angkatan kami melalui visual yang memukau. 10/10 untuk kualitasnya!
+            "
+          </p>
+          <div
+            class="mt-auto flex items-center gap-3"
+          >
+            <div
+              class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full bg-primary text-[13px] font-bold text-white"
+            >
+              RA
+            </div>
+            <div
+              class="flex flex-col text-left"
+            >
+              <span
+                class="text-[14px] font-semibold text-white"
+              >
+                Rina Andayani
+              </span>
+              <span
+                class="text-[11px] text-white opacity-45"
+              >
+                Ketua OSIS, SMA 3 Solo
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group relative flex w-full max-w-[280px] flex-col rounded-[20px] border p-[30px] transition-colors duration-500 max-[900px]:max-w-full border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.05)]"
+        >
+          <p
+            class="mb-6 text-left text-[14px] leading-[1.7] text-white opacity-85"
+          >
+            "
+            Proses kerjanya transparan dan hasilnya melampaui ekspektasi. Film angkatan yang dibuat juga sangat sinematik dan emosional!
+            "
+          </p>
+          <div
+            class="mt-auto flex items-center gap-3"
+          >
+            <div
+              class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full bg-primary text-[13px] font-bold text-white"
+            >
+              DW
+            </div>
+            <div
+              class="flex flex-col text-left"
+            >
+              <span
+                class="text-[14px] font-semibold text-white"
+              >
+                Deni Wicaksono
+              </span>
+              <span
+                class="text-[11px] text-white opacity-45"
+              >
+                Guru BK, SMA Prestige Yogyakarta
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PartnersSection Component renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="bg-white py-[100px] px-[50px] text-center"
+  >
+    <div
+      data-initial="{"opacity":0,"y":40}"
+      data-transition="{"duration":0.8,"ease":"easeOut"}"
+      data-whileinview="{"opacity":1,"y":0}"
+      viewport="[object Object]"
+    >
+      <h2
+        class="text-[11px] uppercase tracking-[4px] text-gray-500 font-medium mb-[45px]"
+      >
+        PARTNERED WITH 150+ SCHOOLS & BRANDS
+      </h2>
+      <div
+        class="flex flex-wrap justify-center max-w-[900px] mx-auto gap-y-[16px] gap-x-[40px]"
+      >
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            EduPrime
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            SchoolHub
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            LearnTech
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            BrightEdu
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            PixelArts
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            MediaCo
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            Creativa
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+        <div
+          class="flex items-center gap-[16px]"
+        >
+          <span
+            class="text-[24px] min-[900px]:text-[32px] font-[800] text-dark"
+          >
+            ODA Group
+          </span>
+          <div
+            class="w-[8px] h-[8px] rounded-full bg-primary flex-shrink-0"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
