@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`HeroSection Component renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="relative w-full overflow-hidden flex flex-col justify-between pt-[140px] pb-[80px] px-[50px] max-[600px]:px-[20px]"
+    style="min-height: 100vh; background: linear-gradient(160deg, #1a1a2e, #0a0a1a, #111128);"
+  >
+    <style>
+
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes spin-slow-reverse {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 40s linear infinite;
+        }
+        .animate-spin-reverse {
+          animation: spin-slow-reverse 30s linear infinite;
+        }
+        .animate-float {
+          animation: float 8s ease-in-out infinite;
+        }
+
+    </style>
+    <div
+      class="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full border border-white/5 pointer-events-none animate-spin-slow"
+    />
+    <div
+      class="absolute bottom-[-50px] left-[-50px] w-[300px] h-[300px] rounded-full border border-white/5 pointer-events-none animate-spin-reverse"
+    />
+    <div
+      class="absolute top-[30%] right-[20%] w-[200px] h-[200px] rounded-full border border-primary/10 pointer-events-none animate-float"
+    />
+    <div
+      class="absolute top-1/2 right-[20%] transform -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/[0.08] blur-[80px] pointer-events-none"
+    />
+    <div
+      class="absolute right-[-20px] top-[10%] text-[350px] font-display font-bold leading-none text-white/[0.02] pointer-events-none select-none z-0"
+    >
+      gm
+    </div>
+    <div
+      class="absolute bottom-20 left-0 w-full overflow-hidden pointer-events-none z-0 h-[100px]"
+    >
+      <svg
+        class="w-[200%] md:w-full h-full"
+        preserveAspectRatio="none"
+        viewBox="0 0 1200 100"
+      >
+        <path
+          d="M0,50 Q300,100 600,50 T1200,50"
+          fill="none"
+          opacity="0.5"
+          stroke="#e6005c"
+          stroke-width="2.5"
+        />
+        <path
+          d="M0,60 Q300,110 600,60 T1200,60"
+          fill="none"
+          opacity="0.08"
+          stroke="white"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      class="absolute bottom-[-1px] left-0 w-full pointer-events-none z-20"
+    >
+      <svg
+        class="w-full h-auto"
+        fill="white"
+        viewBox="0 0 1440 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,100L1440,100L1440,80Q720,0 0,80Z"
+        />
+      </svg>
+    </div>
+    <div
+      class="relative z-10 flex-1 flex flex-col justify-between max-w-[1400px] mx-auto w-full h-full"
+    >
+      <div
+        class="flex flex-col min-[900px]:flex-row justify-between items-start gap-12 w-full mt-4"
+      >
+        <div
+          class="max-w-[420px] flex flex-col gap-6"
+          data-animate="{"opacity":1,"y":0}"
+          data-initial="{"opacity":0,"y":30}"
+          data-transition="{"delay":0.1,"duration":0.8}"
+        >
+          <p
+            class="text-white/70 text-[14px] leading-[1.85] font-body"
+          >
+            Kami membantu sekolah menghadirkan buku tahunan modern yang tidak hanya menjadi koleksi, tapi juga pengalaman digital interaktif yang bisa dikenang selamanya.
+          </p>
+          <button
+            class="w-fit px-6 py-2 rounded-full border border-white/25 text-white text-[12px] uppercase tracking-wider transition-all duration-300 hover:bg-primary hover:border-primary hover:shadow-[0_0_15px_rgba(230,0,92,0.4)]"
+          >
+            ABOUT US →
+          </button>
+        </div>
+        <div
+          class="flex flex-col min-[600px]:flex-row gap-8 min-[600px]:gap-[50px]"
+        >
+          <div
+            class="flex flex-col"
+            data-animate="{"opacity":1,"y":0}"
+            data-initial="{"opacity":0,"y":30}"
+            data-transition="{"delay":0.2,"duration":0.8}"
+          >
+            <div
+              class="text-white text-[36px] min-[600px]:text-[60px] font-black leading-none font-display"
+            >
+              <span>
+                0
+              </span>
+            </div>
+            <div
+              class="text-white/45 text-[11px] uppercase tracking-wider mt-2 max-w-[200px]"
+            >
+              Sekolah Telah Bekerjasama Dengan GM Yearbook
+            </div>
+          </div>
+          <div
+            class="flex flex-col"
+            data-animate="{"opacity":1,"y":0}"
+            data-initial="{"opacity":0,"y":30}"
+            data-transition="{"delay":0.3,"duration":0.8}"
+          >
+            <div
+              class="text-white text-[36px] min-[600px]:text-[60px] font-black leading-none font-display"
+            >
+              8
+              <sup
+                class="text-primary top-[-0.3em]"
+              >
+                +
+              </sup>
+            </div>
+            <div
+              class="text-white/45 text-[11px] uppercase tracking-wider mt-2 max-w-[200px]"
+            >
+              Tahun Mengeksplorasi Industri Creative
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-20 min-[900px]:mt-0 relative z-10 mb-10"
+        data-animate="{"opacity":1,"y":0}"
+        data-initial="{"opacity":0,"y":30}"
+        data-transition="{"delay":0.4,"duration":0.8}"
+      >
+        <h1
+          class="font-display text-[32px] min-[600px]:text-[44px] min-[900px]:text-[78px] font-extrabold italic text-white max-w-[650px] leading-[1.05]"
+        >
+          Creative Digital Yearbook
+          <span
+            class="text-primary"
+          >
+            #1
+          </span>
+           in Indonesia
+        </h1>
+      </div>
+    </div>
+    <div
+      class="absolute right-[60px] top-1/2 transform -translate-y-1/2 hidden min-[1100px]:block z-20 pointer-events-none [perspective:1000px]"
+    >
+      <div
+        class="relative w-[400px] h-[350px]"
+      >
+        <div
+          class="absolute top-0 left-0 w-[300px] h-[210px] rounded-lg shadow-[20px_20px_30px_rgba(0,0,0,0.8)] border border-white/10 flex items-center justify-center flex-col overflow-hidden"
+          style="transform: rotateY(-10deg); background: linear-gradient(135deg, #111 0%, #222 100%);"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay"
+          />
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-book-open text-white/30 mb-4"
+            fill="none"
+            height="40"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 7v14"
+            />
+            <path
+              d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+            />
+          </svg>
+          <span
+            class="text-white/30 font-display font-bold tracking-widest uppercase"
+          >
+            GM Yearbook
+          </span>
+        </div>
+        <div
+          class="absolute bottom-0 right-0 w-[240px] h-[170px] rounded-lg shadow-[15px_15px_25px_rgba(0,0,0,0.7)] border border-white/10 flex items-center justify-center flex-col overflow-hidden"
+          style="transform: rotateY(-5deg) translateZ(20px); background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent mix-blend-overlay"
+          />
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-book-open text-white/30 mb-3"
+            fill="none"
+            height="30"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 7v14"
+            />
+            <path
+              d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+            />
+          </svg>
+          <span
+            class="text-white/30 font-display font-bold tracking-widest uppercase text-sm"
+          >
+            GM Yearbook
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

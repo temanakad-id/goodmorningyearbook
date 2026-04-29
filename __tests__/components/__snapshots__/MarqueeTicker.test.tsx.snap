@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`MarqueeTicker Component renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="overflow-hidden w-full flex flex-col"
+  >
+    <style>
+
+        @keyframes marqueeLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes marqueeRight {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+
+        .marquee-track {
+          display: flex;
+          white-space: nowrap;
+          will-change: transform;
+        }
+
+        .marquee-track.left {
+          animation: marqueeLeft 25s linear infinite;
+        }
+
+        .marquee-track.right {
+          animation: marqueeRight 30s linear infinite;
+        }
+
+        .marquee-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 20px;
+          padding: 0 20px;
+          font-size: 16px;
+          font-weight: 800;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          white-space: nowrap;
+        }
+
+        .dot-white {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: white;
+        }
+
+        .dot-primary {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #e6005c;
+        }
+
+    </style>
+    <div
+      class="bg-primary py-[16px]"
+    >
+      <div
+        class="marquee-track left"
+      >
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATIVE DIGITAL YEARBOOK
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATIVE DIGITAL YEARBOOK
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            FLEXIBLE PRICE
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            TRUSTED
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATIVE DIGITAL YEARBOOK
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATIVE DIGITAL YEARBOOK
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            FLEXIBLE PRICE
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            TRUSTED
+          </span>
+          <span
+            class="dot-white"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-dark py-[14px]"
+    >
+      <div
+        class="marquee-track right"
+      >
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATING MEMORIES SINCE 2017
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            IT'S YOUR LEGACY
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            MORE THAN MEMORIES
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            GOOD MORNING YEARBOOK
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            CREATING MEMORIES SINCE 2017
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            IT'S YOUR LEGACY
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            MORE THAN MEMORIES
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+        <div
+          class="marquee-item"
+        >
+          <span>
+            GOOD MORNING YEARBOOK
+          </span>
+          <span
+            class="dot-primary"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

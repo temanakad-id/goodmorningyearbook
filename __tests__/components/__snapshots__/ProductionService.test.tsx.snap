@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ProductionService Component renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="bg-white py-[110px] px-[50px] w-full"
+  >
+    <div
+      class="max-w-[1200px] mx-auto"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-[60px] gap-6"
+        data-animate="{"opacity":1,"y":0}"
+        data-initial="{"opacity":0,"y":30}"
+        data-transition="{"duration":0.6}"
+      >
+        <h2
+          class="font-display text-[52px] font-[800] leading-tight text-gray-900 m-0 p-0"
+        >
+          <em
+            class="italic font-display"
+          >
+            Production
+          </em>
+           Service
+        </h2>
+        <p
+          class="max-w-[420px] text-gray-500 text-[14px] leading-relaxed m-0 p-0"
+        >
+          Dari sesi Pemotretan, Video, Event, hingga AR experience. Setiap momen dibuat lebih hidup dan siap diabadikan dalam buku tahunan terbaik.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[28px]"
+      >
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                Drone Shoot
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Film Angkatan
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#667eea] to-[#764ba2]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Sesi Drone Shoot / Formasi Angkatan
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  Aerial Photography
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0.12,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                GM Hub Creative
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Digital Yearbook
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#e6005c] to-[#ff4081]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Creative Digital / Yearbook
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  Interactive Design
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0.24,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                Augmented Reality
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Video BTS
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#4facfe] to-[#00f2fe]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Augmented / Reality
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  AR Experience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0.36,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                Exclusive Yearbook
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Creative Design
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#43e97b] to-[#38f9d7]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Exclusive / Yearbook
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  Hardbox Packaging · 3D Tunnel Acrylic
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0.48,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                Film Angkatan
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Creative Concept
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#fa709a] to-[#fee140]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Film / Angkatan
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  Cinematic Production
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col gap-[16px]"
+          data-initial="{"opacity":0,"y":35}"
+          data-transition="{"delay":0.6,"duration":0.5}"
+          data-whileinview="{"opacity":1,"y":0}"
+          viewport="[object Object]"
+        >
+          <div
+            class="flex justify-between items-center px-1"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h3
+                class="text-[17px] font-bold text-gray-900 group-hover:text-primary transition-colors"
+              >
+                Malam Keakraban
+              </h3>
+              <span
+                class="text-[11px] text-gray-500 uppercase tracking-wider"
+              >
+                Farewell Moment
+              </span>
+            </div>
+            <button
+              class="w-[36px] h-[36px] rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:bg-dark group-hover:scale-110 group-hover:-rotate-45"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-arrow-right w-4 h-4 text-white"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="m12 5 7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="relative group-hover:-translate-y-[6px] transition-transform duration-300 ease-out group-hover:shadow-md rounded-[14px]"
+          >
+            <div
+              class="relative h-[240px] rounded-[14px] overflow-hidden cursor-pointer w-full will-change-transform"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#a18cd1] to-[#fbc2eb]"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent"
+              />
+              <div
+                class="absolute bottom-0 left-0 p-[24px] z-10 pointer-events-none"
+              >
+                <h4
+                  class="text-[20px] font-bold text-white leading-tight mb-1"
+                >
+                  Makrab / Angkatan
+                </h4>
+                <p
+                  class="text-[11px] text-white/70"
+                >
+                  Event Documentation
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
