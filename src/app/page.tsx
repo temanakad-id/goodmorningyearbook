@@ -5,6 +5,7 @@ import ProcessWorkflow from "@/components/sections/ProcessWorkflow";
 import NewsSection from "@/components/sections/NewsSection";
 import ClientReviews from "@/components/sections/ClientReviews";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <NewsSection />
         <ClientReviews />
       </main>
+      <Footer />
     </>
   );
 }
