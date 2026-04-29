@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning Creative Yearbook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3a2de8;
+            --primary-dark: #2a1fb8;
+            --accent: #f5a623;
+            --dark: #111111;
+            --light: #ffffff;
+            --gray: #f5f5f5;
+            --text-gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 60px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .nav-logo-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 11px;
+            line-height: 1.3;
+            color: var(--text-gray);
+        }
+
+        .nav-logo-text strong {
+            color: var(--dark);
+            font-size: 13px;
+        }
+
+        .nav-brand {
+            display: flex;
+            gap: 30px;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-start {
+            background: var(--dark);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-start:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-start i {
+            font-size: 11px;
+        }
+
+        .nav-dark-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-dark-toggle:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, #5b4de8 40%, var(--primary-dark) 100%);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 120px 60px 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: white;
+            clip-path: ellipse(70% 100% at 50% 100%);
+        }
+
+        .hero-decorative {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .blob-1 {
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50% 40% 60% 50%;
+            animation: blobFloat 8s ease-in-out infinite;
+        }
+
+        .blob-2 {
+            position: absolute;
+            top: 40%;
+            right: 20%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40% 60% 50% 50%;
+            animation: blobFloat 6s ease-in-out infinite reverse;
+        }
+
+        .accent-line {
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+            right: 0;
+            height: 80px;
+            overflow: hidden;
+        }
+
+        .accent-line svg {
+            width: 120%;
+            margin-left: -10%;
+        }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, -20px) rotate(5deg); }
+            66% { transform: translate(-10px, 10px) rotate(-3deg); }
+        }
+
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-description {
+            max-width: 380px;
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-about {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn-about:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .hero-headline {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-headline h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            font-style: italic;
+        }
+
+        .hero-mockup {
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        .mockup-book {
+            width: 350px;
+            height: 250px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 8px;
+            box-shadow: 30px 30px 60px rgba(0,0,0,0.3);
+            transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ========== SECTIONS COMMON ========== */
+        section {
+            padding: 100px 60px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .section-title em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .section-desc {
+            max-width: 400px;
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ========== PRODUCTION SERVICE ========== */
+        .production {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .service-card-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .service-card-header small {
+            display: block;
+            color: var(--text-gray);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .service-arrow {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover .service-arrow {
+            background: var(--accent);
+            transform: rotate(45deg);
+        }
+
+        .service-card-img {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-card-img .overlay-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+        }
+
+        .service-card-img .overlay-text h4 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .service-card-img .overlay-text p {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        .service-placeholder {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sp-1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .sp-2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .sp-3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .sp-4 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .sp-5 { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .sp-6 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+
+        .service-placeholder span {
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        /* ========== MARQUEE ========== */
+        .marquee-section {
+            background: var(--primary);
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-row {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+            padding: 18px 0;
+        }
+
+        .marquee-row.reverse {
+            animation: marquee-reverse 25s linear infinite;
+            background: var(--dark);
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 30px;
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .marquee-item .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* ========== PHOTO SESSION ========== */
+        .photo-session {
+            background: white;
+        }
+
+        .photo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .photo-left .session-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .photo-left .session-title em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .session-desc {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .session-types {
+            list-style: none;
+        }
+
+        .session-types li {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .session-types li:hover {
+            color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .session-types li.muted {
+            color: #ccc;
+        }
+
+        .session-types li.active {
+            color: var(--dark);
+        }
+
+        .photo-right {
+            position: relative;
+        }
+
+        .photo-showcase {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-showcase-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .photo-showcase-text {
+            font-size: 64px;
+            font-weight: 900;
+            color: rgba(255,255,255,0.15);
+            text-align: center;
+            line-height: 1;
+        }
+
+        /* ========== PROCESS WORKFLOW ========== */
+        .workflow {
+            background: var(--gray);
+        }
+
+        .workflow-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .workflow-desc {
+            max-width: 400px;
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .btn-project {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn-project:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .workflow-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .workflow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .workflow-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .workflow-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .workflow-card p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .workflow-number {
+            position: absolute;
+            bottom: 20px;
+            right: 25px;
+            font-size: 48px;
+            font-weight: 900;
+            color: rgba(0,0,0,0.05);
+        }
+
+        /* ========== TEAM ========== */
+        .team {
+            background: white;
+        }
+
+        .team-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            background: var(--dark);
+            border-radius: 12px;
+            padding: 12px 30px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateX(10px);
+            background: #222;
+        }
+
+        .member-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #444;
+            margin-right: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #888;
+            flex-shrink: 0;
+        }
+
+        .member-info {
+            flex: 1;
+        }
+
+        .member-info h3 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .member-info small {
+            color: rgba(255,255,255,0.5);
+            font-size: 13px;
+        }
+
+        .member-socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .member-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .member-socials a:hover {
+            background: var(--primary);
+        }
+
+        /* ========== CLIENT REVIEWS ========== */
+        .reviews {
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            background: linear-gradient(180deg, var(--primary), transparent);
+            opacity: 0.3;
+        }
+
+        .reviews-title {
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviews-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: white;
+        }
+
+        .reviews-title h2 em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .reviews-rating {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #ffd700;
+        }
+
+        .reviews-carousel {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .review-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 300px;
+            color: white;
+            transform: rotate(-2deg);
+            transition: all 0.3s;
+        }
+
+        .review-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .review-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .review-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .review-author-info small {
+            display: block;
+            opacity: 0.6;
+            font-size: 12px;
+        }
+
+        /* ========== PARTNERS ========== */
+        .partners {
+            background: white;
+            text-align: center;
+        }
+
+        .partners-label {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .partner-name {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .partner-name .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        /* ========== NEWS ========== */
+        .news {
+            background: var(--gray);
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .news-header h2 {
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        .btn-articles {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border: 2px solid var(--dark);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-articles:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .news-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .news-card-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .np-1 { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .np-2 { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
+        .np-3 { background: linear-gradient(135deg, #fd79a8, #e84393); }
+
+        .news-card-body {
+            padding: 24px;
+        }
+
+        .news-card-body h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .news-card-body p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .news-card-body .news-date {
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 15px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-col a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-socials a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .footer-socials a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            opacity: 0.5;
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .navbar { padding: 15px 30px; }
+            section { padding: 80px 30px; }
+            .hero { padding: 120px 30px 60px; }
+            .hero-headline h1 { font-size: 48px; }
+            .hero-stats { gap: 30px; }
+            .stat-number { font-size: 36px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .workflow-grid { grid-template-columns: repeat(2, 1fr); }
+            .photo-content { grid-template-columns: 1fr; }
+            .hero-mockup { display: none; }
+            .footer { padding: 40px 30px; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 10px 20px; }
+            .nav-brand { display: none; }
+            section { padding: 60px 20px; }
+            .hero { padding: 100px 20px 40px; }
+            .hero-headline h1 { font-size: 36px; }
+            .hero-top { flex-direction: column; gap: 30px; }
+            .section-header { flex-direction: column; gap: 20px; }
+            .section-title { font-size: 36px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .workflow-grid { grid-template-columns: 1fr; }
+            .news-grid { grid-template-columns: 1fr; }
+            .session-types li { font-size: 24px; }
+            .photo-left .session-title { font-size: 40px; }
+            .reviews-carousel { flex-direction: column; align-items: center; }
+            .partner-name { font-size: 24px; }
+            .footer-top { flex-direction: column; gap: 30px; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        /* ========== HAMBURGER ========== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-right .btn-start { display: none; }
+        }
+
+        /* ========== PRELOADER ========== */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--primary);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.8s;
+        }
+
+        .preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-text">GM Creative</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <div class="logo-icon">GM</div>
+            <div class="nav-logo-text">
+                <strong>MORE THAN MEMORIES</strong>
+                IT'S YOUR LEGACY
+            </div>
+        </div>
+        <div class="nav-brand">
+            <span>GOOD MORNING</span>
+            <span>YEARBOOK</span>
+        </div>
+        <div class="nav-right">
+            <a href="#contact" class="btn-start">
+                START PROJECT <i class="fas fa-arrow-right"></i>
+            </a>
+            <button class="nav-dark-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-decorative">
+            <div class="blob-1"></div>
+            <div class="blob-2"></div>
+        </div>
+        <div class="accent-line">
+            <svg viewBox="0 0 1440 100" fill="none">
+                <path d="M0 50 Q360 0 720 50 Q1080 100 1440 50" stroke="#f5a623" stroke-width="4" fill="none"/>
+                <path d="M0 60 Q360 10 720 60 Q1080 110 1440 60" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+
+        <div class="hero-top">
+            <div class="hero-description">
+                <p>Kami membantu sekolah menghadirkan buku tahunan modern yang tidak hanya menjadi koleksi, tapi juga pengalaman digital interaktif yang bisa dikenang selamanya.</p>
+                <a href="#about" class="btn-about">
+                    ABOUT US <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">231</div>
+                    <div class="stat-label">Sekolah Telah Bekerjasama<br>Dengan GM Yearbook</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Tahun Mengeksplorasi<br>Industri Creative</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-headline">
+            <h1>Creative Digital<br>Yearbook #1<br>in Indonesia</h1>
+        </div>
+
+        <div class="hero-mockup">
+            <div class="mockup-book">
+                <div style="text-align:center;">
+                    <i class="fas fa-book-open" style="font-size:48px;opacity:0.3;display:block;margin-bottom:10px;"></i>
+                    <span style="opacity:0.5;">GM Yearbook Preview</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-wave"></div>
+    </section>
+
+    <!-- PRODUCTION SERVICE -->
+    <section class="production" id="services">
+        <div class="section-header reveal">
+            <div class="section-title">Production <em>Service</em></div>
+            <div class="section-desc">
+                Dari sesi Pemotretan, Video, Event, hingga AR experience. Setiap momen dibuat lebih hidup dan siap diabadikan dalam buku tahunan terbaik.
+            </div>
+        </div>
+
+        <div class="services-grid reveal">
+            <!-- Row 1 -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>Drone Shoot</h3>
+                        <small>Film Angkatan</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-1">
+                    <i class="fas fa-drone" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Sesi Drone Shoot<br>Formasi Angkatan
+                    <span>Aerial Photography</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>GM Hub Creative</h3>
+                        <small>Digital Yearbook</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-2">
+                    <i class="fas fa-book" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Creative Digital<br>Yearbook
+                    <span>Interactive Design</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>Augmented Reality</h3>
+                        <small>Video BTS</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-3">
+                    <i class="fas fa-vr-cardboard" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Augmented<br>Reality
+                    <span>AR Experience</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid reveal">
+            <!-- Row 2 -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>Exclusive Yearbook</h3>
+                        <small>Creative Design</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-4">
+                    <i class="fas fa-gem" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Exclusive<br>Yearbook
+                    <span>Hardbox Packaging &bull; 3D Tunnel Acrylic</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>Film Angkatan</h3>
+                        <small>Creative Concept</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-5">
+                    <i class="fas fa-film" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Film<br>Angkatan
+                    <span>Cinematic Production</span>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-header">
+                    <div>
+                        <h3>Malam Keakraban</h3>
+                        <small>Farewell Moment</small>
+                    </div>
+                    <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="service-placeholder sp-6">
+                    <i class="fas fa-star" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                    Makrab<br>Angkatan
+                    <span>Event Documentation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-row">
+            <div class="marquee-item">CREATIVE DIGITAL YEARBOOK <span class="dot"></span></div>
+            <div class="marquee-item">CREATIVE DIGITAL YEARBOOK <span class="dot"></span></div>
+            <div class="marquee-item">FLEXIBLE PRICE <span class="dot"></span></div>
+            <div class="marquee-item">TRUSTED <span class="dot"></span></div>
+            <div class="marquee-item">CREATIVE DIGITAL YEARBOOK <span class="dot"></span></div>
+            <div class="marquee-item">CREATIVE DIGITAL YEARBOOK <span class="dot"></span></div>
+            <div class="marquee-item">FLEXIBLE PRICE <span class="dot"></span></div>
+            <div class="marquee-item">TRUSTED <span class="dot"></span></div>
+        </div>
+        <div class="marquee-row reverse">
+            <div class="marquee-item">CREATING MEMORIES SINCE 2017 <span class="dot"></span></div>
+            <div class="marquee-item">IT'S YOUR LEGACY <span class="dot"></span></div>
+            <div class="marquee-item">MORE THAN MEMORIES <span class="dot"></span></div>
+            <div class="marquee-item">CREATING MEMORIES SINCE 2017 <span class="dot"></span></div>
+            <div class="marquee-item">IT'S YOUR LEGACY <span class="dot"></span></div>
+            <div class="marquee-item">MORE THAN MEMORIES <span class="dot"></span></div>
+        </div>
+    </div>
+
+    <!-- PHOTO SESSION -->
+    <section class="photo-session" id="photo">
+        <div class="photo-content reveal">
+            <div class="photo-left">
+                <div class="session-title"><em>Photo</em> Session</div>
+                <p class="session-desc">
+                    Dari foto formal hingga konsep kreatif, semua dirancang agar setiap kenangan tampil menawan di buku tahunan.
+                </p>
+                <ul class="session-types">
+                    <li class="active"><strong>Individual Studio</strong></li>
+                    <li class="muted">Group Studio Set</li>
+                    <li class="muted">Individual Outdoor</li>
+                    <li class="muted">Group Outdoor</li>
+                </ul>
+            </div>
+            <div class="photo-right">
+                <div class="photo-showcase">
+                    <div class="photo-showcase-label">Individual</div>
+                    <div class="photo-showcase-text">SESSION</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS WORKFLOW -->
+    <section class="workflow" id="workflow">
+        <div class="workflow-top reveal">
+            <div class="section-title"><em>Process</em> Workflow</div>
+            <div class="workflow-desc">
+                <p>Workflow kami jelas dan transparan. Semua progress bisa dipantau sekolah secara real time. Proses mudah, hasil maksimal.</p>
+                <a href="#contact" class="btn-project">
+                    START PROJECT <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="workflow-grid reveal">
+            <div class="workflow-card">
+                <div class="workflow-icon"><i class="fas fa-handshake"></i></div>
+                <h4>Konsultasi & Kontrak</h4>
+                <p>Diskusi kebutuhan sekolah, penyesuaian paket, dan penandatanganan kontrak kerjasama.</p>
+                <div class="workflow-number">01</div>
+            </div>
+            <div class="workflow-card">
+                <div class="workflow-icon"><i class="fas fa-palette"></i></div>
+                <h4>Konsep & Desain</h4>
+                <p>Tim kreatif merancang konsep buku tahunan, tema foto, dan layout desain sesuai identitas sekolah.</p>
+                <div class="workflow-number">02</div>
+            </div>
+            <div class="workflow-card">
+                <div class="workflow-icon"><i class="fas fa-camera"></i></div>
+                <h4>Produksi & Dokumentasi</h4>
+                <p>Pelaksanaan sesi foto dan video profesional, termasuk dokumentasi kegiatan sekolah.</p>
+                <div class="workflow-number">03</div>
+            </div>
+            <div class="workflow-card">
+                <div class="workflow-icon"><i class="fas fa-edit"></i></div>
+                <h4>Editing & Design Layout</h4>
+                <p>Tim GM Yearbook melakukan proses editing foto/video serta menyusun desain layout sesuai konsep.</p>
+                <div class="workflow-number">04</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+        <div class="section-header reveal">
+            <div class="section-title"><em>Team's</em> Leader</div>
+            <div class="section-desc">
+                Para Team Leader berpengalaman di bidang kreatif, produksi, komunikasi, dan manajemen.
+            </div>
+        </div>
+
+        <div class="team-list reveal">
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Andi Pratama</h3>
+                    <small>CEO & Founder</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Sari Wulandari</h3>
+                    <small>Marcom Manager</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Rizky Mahendra</h3>
+                    <small>Production Manager</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Dina Rahmawati</h3>
+                    <small>Project Leader</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Fajar Nugroho</h3>
+                    <small>Creative Advisor</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-photo"><i class="fas fa-user"></i></div>
+                <div class="member-info">
+                    <h3>Maya Putri</h3>
+                    <small>HR Dept</small>
+                </div>
+                <div class="member-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="reviews-title reveal">
+            <h2><em>Client's</em> Reviews</h2>
+        </div>
+        <div class="reviews-rating reveal">
+            <div class="rating-badge">
+                <span class="stars">★★★★★</span>
+                <span>4.9/5 — Based on Client Satisfaction Survey</span>
+            </div>
+        </div>
+        <div class="reviews-carousel reveal">
+            <div class="review-card">
+                <p>"GM Yearbook benar-benar membuat buku tahunan kami terasa istimewa. Desainnya kreatif, prosesnya profesional. Sangat recommended!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">SM</div>
+                    <div class="review-author-info">
+                        <strong>Siti M.</strong>
+                        <small>Kepala Sekolah, SMAN 1 Bandung</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <p>"Kemampuan tim GM dalam menciptakan pengalaman digital yang interaktif sangat luar biasa. Siswa-siswa sangat antusias!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">BK</div>
+                    <div class="review-author-info">
+                        <strong>Budi K.</strong>
+                        <small>Waka Kesiswaan, SMA 5 Jakarta</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <p>"Tim GM Yearbook benar-benar mengangkat kenangan angkatan kami melalui visual yang memukau. 10/10 untuk kualitasnya!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">RA</div>
+                    <div class="review-author-info">
+                        <strong>Rina A.</strong>
+                        <small>Ketua OSIS, SMA 3 Surabaya</small>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <p>"Proses kerjanya transparan dan hasilnya melampaui ekspektasi. Film angkatan yang dibuat juga sangat sinematik!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">DW</div>
+                    <div class="review-author-info">
+                        <strong>Deni W.</strong>
+                        <small>Guru BK, SMA Prestige Yogyakarta</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="partners" id="partners">
+        <div class="partners-label reveal">PARTNERED WITH 150+ BRANDS</div>
+        <div class="partners-grid reveal">
+            <span class="partner-name">EduPrime <span class="dot"></span></span>
+            <span class="partner-name">SchoolHub <span class="dot"></span></span>
+            <span class="partner-name">LearnTech <span class="dot"></span></span>
+            <span class="partner-name">BrightEdu <span class="dot"></span></span>
+            <span class="partner-name">PixelArts <span class="dot"></span></span>
+            <span class="partner-name">MediaCo <span class="dot"></span></span>
+            <span class="partner-name">Creativa <span class="dot"></span></span>
+            <span class="partner-name">ODA Group <span class="dot"></span></span>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="news" id="news">
+        <div class="news-header reveal">
+            <h2>News</h2>
+            <a href="#" class="btn-articles">ALL ARTICLES <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="news-grid reveal">
+            <div class="news-card">
+                <div class="news-card-img">
+                    <div class="news-placeholder np-1">
+                        <i class="fas fa-school" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                        SMA Negeri 1 Jakarta<br>Yearbook 2026
+                    </div>
+                </div>
+                <div class="news-card-body">
+                    <h3>SMA Negeri 1 Jakarta — Yearbook 2026</h3>
+                    <p>Kolaborasi spektakuler dengan salah satu sekolah terbaik di ibukota.</p>
+                    <div class="news-date">March 2026</div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-img">
+                    <div class="news-placeholder np-2">
+                        <i class="fas fa-graduation-cap" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                        SMA Al-Azhar Bandung<br>Yearbook 2026
+                    </div>
+                </div>
+                <div class="news-card-body">
+                    <h3>SMA Al-Azhar Bandung — Yearbook 2026</h3>
+                    <p>Konsep yearbook modern dengan sentuhan tradisional Sunda yang elegan.</p>
+                    <div class="news-date">February 2026</div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-img">
+                    <div class="news-placeholder np-3">
+                        <i class="fas fa-star" style="font-size:40px;margin-bottom:10px;opacity:0.5;"></i>
+                        SMA Prestige Surabaya<br>Yearbook 2026
+                    </div>
+                </div>
+                <div class="news-card-body">
+                    <h3>SMA Prestige Surabaya — Yearbook 2026</h3>
+                    <p>Yearbook premium lengkap dengan AR experience dan exclusive packaging.</p>
+                    <div class="news-date">January 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Komp. Royal City Icon J25<br>Kaliwates, Kab. Jember</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>
+                    <a href="mailto:admin@goodmorning.co.id">Admin@goodmorning.co.id</a><br>
+                    <a href="tel:+6288884777744">+62 8888 4 7777 4</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Good Morning Creative Yearbook. All Rights Reserved.</span>
+            <span>Designed with ❤️ in Indonesia</span>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hide');
+            }, 1500);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const revealPoint = 150;
+                if (elementTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Session types hover
+        const sessionTypes = document.querySelectorAll('.session-types li');
+        sessionTypes.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                sessionTypes.forEach(i => i.classList.add('muted'));
+                sessionTypes.forEach(i => i.classList.remove('active'));
+                item.classList.remove('muted');
+                                item.classList.add('active');
+            });
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-number');
+        let counterStarted = false;
+
+        const animateCounters = () => {
+            if (counterStarted) return;
+            const heroSection = document.querySelector('.hero');
+            const rect = heroSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                counterStarted = true;
+                counters.forEach(counter => {
+                    const target = parseInt(counter.textContent);
+                    if (isNaN(target)) return;
+                    let current = 0;
+                    const increment = target / 60;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = counter.dataset.suffix 
+                                ? target + counter.dataset.suffix 
+                                : target;
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                });
+            }
+        };
+
+        window.addEventListener('scroll', animateCounters);
+        window.addEventListener('load', animateCounters);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect on hero blobs
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const blob1 = document.querySelector('.blob-1');
+            const blob2 = document.querySelector('.blob-2');
+            if (blob1 && blob2) {
+                blob1.style.transform = `translate(${scrolled * 0.02}px, ${scrolled * -0.05}px)`;
+                blob2.style.transform = `translate(${scrolled * -0.03}px, ${scrolled * 0.04}px)`;
+            }
+        });
+
+        // Theme toggle (light/dark concept)
+        let isDark = false;
+        function toggleTheme() {
+            isDark = !isDark;
+            const icon = document.querySelector('.nav-dark-toggle i');
+            if (isDark) {
+                document.body.style.filter = 'invert(0.85) hue-rotate(180deg)';
+                document.querySelectorAll('img').forEach(img => {
+                    img.style.filter = 'invert(1) hue-rotate(180deg)';
+                });
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                document.body.style.filter = 'none';
+                document.querySelectorAll('img').forEach(img => {
+                    img.style.filter = 'none';
+                });
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // Mobile menu toggle
+        let menuOpen = false;
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            const hamburger = document.querySelector('.hamburger');
+            const spans = hamburger.querySelectorAll('span');
+
+            if (menuOpen) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+
+                // Create mobile menu
+                if (!document.querySelector('.mobile-menu')) {
+                    const mobileMenu = document.createElement('div');
+                    mobileMenu.classList.add('mobile-menu');
+                    mobileMenu.style.cssText = `
+                        position: fixed;
+                        top: 70px;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(255,255,255,0.98);
+                        backdrop-filter: blur(20px);
+                        z-index: 999;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 30px;
+                        animation: fadeIn 0.3s ease;
+                    `;
+                    mobileMenu.innerHTML = `
+                        <a href="#home" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Home</a>
+                        <a href="#services" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Services</a>
+                        <a href="#photo" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Photo Session</a>
+                        <a href="#workflow" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Workflow</a>
+                        <a href="#team" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Team</a>
+                        <a href="#reviews" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">Reviews</a>
+                        <a href="#news" onclick="toggleMenu()" style="font-size:24px;font-weight:700;color:#111;text-decoration:none;">News</a>
+                        <a href="#contact" onclick="toggleMenu()" style="
+                            font-size:16px;
+                            font-weight:600;
+                            color:#fff;
+                            text-decoration:none;
+                            background:#3a2de8;
+                            padding:14px 36px;
+                            border-radius:50px;
+                            margin-top:20px;
+                        ">START PROJECT →</a>
+                    `;
+                    document.body.appendChild(mobileMenu);
+                }
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+                const mobileMenu = document.querySelector('.mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.remove();
+                }
+            }
+        }
+
+        // Tilt effect on service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Typing effect for hero (optional enhancement)
+        const heroTitle = document.querySelector('.hero-headline h1');
+        if (heroTitle) {
+            const originalHTML = heroTitle.innerHTML;
+            heroTitle.style.opacity = '0';
+            
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    heroTitle.style.opacity = '1';
+                    heroTitle.style.transition = 'opacity 1s ease';
+                }, 1600);
+            });
+        }
+
+        // Review cards - auto rotate animation
+        const reviewCards = document.querySelectorAll('.review-card');
+        let activeReview = 0;
+
+        function highlightReview() {
+            reviewCards.forEach((card, index) => {
+                if (index === activeReview) {
+                    card.style.transform = 'rotate(0deg) scale(1.05)';
+                    card.style.background = 'rgba(255,255,255,0.15)';
+                    card.style.borderColor = 'rgba(255,255,255,0.3)';
+                } else {
+                    card.style.transform = index % 2 === 0 ? 'rotate(-2deg) scale(1)' : 'rotate(2deg) scale(1)';
+                    card.style.background = 'rgba(255,255,255,0.08)';
+                    card.style.borderColor = 'rgba(255,255,255,0.1)';
+                }
+            });
+            activeReview = (activeReview + 1) % reviewCards.length;
+        }
+
+        setInterval(highlightReview, 3000);
+
+        // Photo session types - auto cycle
+        let activeSession = 0;
+        const sessionLabels = ['Individual Studio', 'Group Studio Set', 'Individual Outdoor', 'Group Outdoor'];
+        const showcaseText = document.querySelector('.photo-showcase-text');
+        const showcaseLabel = document.querySelector('.photo-showcase-label');
+
+        function cycleSession() {
+            sessionTypes.forEach((item, index) => {
+                if (index === activeSession) {
+                    item.classList.add('active');
+                    item.classList.remove('muted');
+                } else {
+                    item.classList.remove('active');
+                    item.classList.add('muted');
+                }
+            });
+
+            if (showcaseText) {
+                showcaseText.textContent = sessionLabels[activeSession].split(' ')[0].toUpperCase();
+            }
+            if (showcaseLabel) {
+                showcaseLabel.textContent = sessionLabels[activeSession];
+            }
+
+            activeSession = (activeSession + 1) % sessionLabels.length;
+        }
+
+        setInterval(cycleSession, 2500);
+
+        // Intersection Observer for staggered animations
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const children = entry.target.querySelectorAll('.service-card, .workflow-card, .team-member, .news-card');
+                    children.forEach((child, index) => {
+                        setTimeout(() => {
+                            child.style.opacity = '1';
+                            child.style.transform = 'translateY(0)';
+                        }, index * 150);
+                    });
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Apply initial hidden state to stagger children
+        document.querySelectorAll('.services-grid, .workflow-grid, .team-list, .news-grid').forEach(container => {
+            container.querySelectorAll('.service-card, .workflow-card, .team-member, .news-card').forEach(child => {
+                child.style.opacity = '0';
+                child.style.transform = 'translateY(30px)';
+                child.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            staggerObserver.observe(container);
+        });
+
+        // Add CSS animation keyframe for fadeIn
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .mobile-menu a {
+                transition: all 0.3s;
+            }
+            
+            .mobile-menu a:hover {
+                color: #3a2de8 !important;
+                transform: scale(1.1);
+            }
+
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #3a2de8;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #2a1fb8;
+            }
+
+            /* Selection color */
+            ::selection {
+                background: #3a2de8;
+                color: white;
+            }
+        `;
+        document.head.appendChild(style);
+
+        console.log('🌅 Good Morning Creative Yearbook — Website Loaded Successfully!');
+    </script>
+
+</body>
+</html>
