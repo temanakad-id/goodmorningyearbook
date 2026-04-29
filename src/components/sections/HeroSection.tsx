@@ -13,9 +13,14 @@ export default function HeroSection() {
   const countRef = useRef<HTMLSpanElement>(null);
   const countInView = useInView(countRef, { once: true });
   const [counterDone, setCounterDone] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (countInView && !counterDone) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && countInView && !counterDone) {
       const controls = animate(0, 231, {
         duration: 2,
         onUpdate: (value) => {
@@ -29,7 +34,7 @@ export default function HeroSection() {
       });
       return () => controls.stop();
     }
-  }, [countInView, counterDone]);
+  }, [countInView, counterDone, mounted]);
 
   return (
     <section
@@ -141,8 +146,9 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="flex flex-col"
             >
+              {/* RESOLVED CONFLICT HERE */}
               <div className="text-white text-[28px] min-[375px]:text-[36px] min-[600px]:text-[60px] font-black leading-none font-display">
-                <span ref={countRef}>0</span>
+                <span ref={countRef} suppressHydrationWarning>{mounted ? "0" : "231"}</span>
               </div>
               <div className="text-white/45 text-[11px] uppercase tracking-wider mt-2 max-w-[200px]">
                 Sekolah Telah Bekerjasama Dengan GM Yearbook
