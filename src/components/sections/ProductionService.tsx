@@ -79,7 +79,7 @@ export default function ProductionService() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-end mb-[60px] gap-6"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-[60px] gap-6"
         >
           <h2 className="font-display text-[52px] font-[800] leading-tight text-gray-900 m-0 p-0">
             <em className="italic font-display">Production</em> Service

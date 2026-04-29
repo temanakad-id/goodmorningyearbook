@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="h-[1px] bg-[rgba(255,255,255,0.1)] mb-[40px]" />
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 min-[900px]:grid-cols-3 gap-[40px] mb-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-[900px]:grid-cols-3 gap-[40px] mb-[60px]">
 
           {/* Column 1 - Office */}
           <div>

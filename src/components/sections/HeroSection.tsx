@@ -141,7 +141,7 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="flex flex-col"
             >
-              <div className="text-white text-[36px] min-[600px]:text-[60px] font-black leading-none font-display">
+              <div className="text-white text-[28px] min-[375px]:text-[36px] min-[600px]:text-[60px] font-black leading-none font-display">
                 <span ref={countRef}>0</span>
               </div>
               <div className="text-white/45 text-[11px] uppercase tracking-wider mt-2 max-w-[200px]">
@@ -155,7 +155,7 @@ export default function HeroSection() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="flex flex-col"
             >
-              <div className="text-white text-[36px] min-[600px]:text-[60px] font-black leading-none font-display">
+              <div className="text-white text-[28px] min-[375px]:text-[36px] min-[600px]:text-[60px] font-black leading-none font-display">
                 8<sup className="text-primary top-[-0.3em]">+</sup>
               </div>
               <div className="text-white/45 text-[11px] uppercase tracking-wider mt-2 max-w-[200px]">
